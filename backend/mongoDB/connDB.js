@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const {clients}=require('./clients')
 
-const mongoUri = "mongodb://127.0.0.1/reservationApp";
+const mongoUri = "mongodb://127.0.0.1/reservationApp33";
 
 mongoose
   .connect(mongoUri, { useUnifiedTopology: true, useNewUrlParser: true })
@@ -18,6 +18,13 @@ const getAllCleint=()=>{
     return clients.find()
 }
 
+const add=(obj)=>{
+  return clients.create(obj)
+}
+
+const deleteOne=()=>{
+
+}
 
 
 
@@ -25,3 +32,4 @@ const getAllCleint=()=>{
 
 module.exports.db = db;
 module.exports.getAllCleint=getAllCleint
+module.exports.add=add
