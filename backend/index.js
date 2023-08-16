@@ -5,7 +5,7 @@ const cors =require('cors');
 const port = 3001;
 const app = express();
 
-const {getAllCleint} = require('./mongoDB/connDB.js')
+const {getAllCleint,add} = require('./mongoDB/connDB.js')
 
 
 app.use(cors());
@@ -19,6 +19,16 @@ app.get("/server/clients",(request,respond)=>{
     .catch((err)=>{
         respond.status(500).send(err)
     })     
+})
+
+app.post("/server/addclient",(request,respond)=>{
+    add(request.body)
+    .then((result)=>{
+        respond.status(201).send(result)
+    })
+    .catch((err)=>{
+        respond.status(500).send(err)
+    })
 })
 
 

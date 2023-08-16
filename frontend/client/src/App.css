@@ -1,38 +1,183 @@
+/* App.css */
+:root {
+  --primary-color: #c72929;
+  --secondary-color: #e6a389;
+  --text-color: white;
+  --background-color: #f0f0f0;
+  --input-border-color: #050202;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  background-color: var(--background-color);
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-brand {
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--text-color);
 }
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.navbar-item:hover {
+  color: lightgray;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  text-decoration: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  min-width: 150px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
+
+.navbar-search input {
+  padding: 12px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.content {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.reservation-form {
+  text-align: left;
+}
+
+.reservation-form h2 {
+  margin-bottom: 20px;
+}
+
+.reservation-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.reservation-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.reservation-form button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reservation-form button:hover {
+  background-color: #555;
+}
+
+/* ClientList.css */
+.client-list {
+  background-color: #bda4a4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.client-list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.client-list ul {
+  list-style: none;
+  padding: 0;
+  margin: ;
+}
+
+.client-list li {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.client-list strong {
+  display: inline-block;
+  width: 500px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+

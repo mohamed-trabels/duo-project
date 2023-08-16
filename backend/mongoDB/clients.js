@@ -5,6 +5,7 @@ const clientSchema = new mongoose.Schema({
   numbrplaces: String,
   date: String,
   time: String,
+  event:String
  
 });
 

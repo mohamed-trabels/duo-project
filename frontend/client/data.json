@@ -3,30 +3,37 @@
        "name":"mohamed trabelsi",
        "numbrplaces":"4",
        "date":"14/08 " ,
-       "time":"18:00 PM"
+       "time":"18:00 PM",
+       "event":"birthday"
     },
     {
         "name":"moncef ben mohamed",
         "numbrplaces":"2",
         "date":"15/08 " ,
-        "time":"17:00 PM"
+        "time":"17:00 PM",
+        "event": "couples"
+        
      },
      {
         "name":"oussema fkih",
         "numbrplaces":"6",
         "date":"18/08 " ,
-        "time":"20:00 PM"
-     },
+        "time":"20:00 PM",
+        "event":"birthday"
+         
+        },
      {
         "name":"sarra bem ammar ",
         "numbrplaces":"4",
         "date":"14/08 " ,
-        "time":"21:00 PM"
+        "time":"21:00 PM",
+        "event": "family"    
      },
      {
         "name":"assil abed",
-        "numbrplaces":"1",
+        "numbrplaces":"2",
         "date":"14/08 " ,
-        "time":"20:00 PM"
+        "time":"20:00 PM",
+        "event": "couples"
      }
 ]
